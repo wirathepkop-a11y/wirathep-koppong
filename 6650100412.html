@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d5e3ff",
+                        "surface-container-highest": "#1e2b3e",
+                        "surface-dim": "#001224",
+                        "on-secondary-fixed": "#191c1e",
+                        "primary": "#a7c8ff",
+                        "on-secondary-container": "#c3c6d1",
+                        "tertiary-container": "#2e343a",
+                        "on-surface": "#ecf1ff",
+                        "inverse-primary": "#001e40",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#8e9199",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "tertiary": "#dde3eb",
+                        "surface-tint": "#a7c8ff",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#001b3c",
+                        "secondary-fixed": "#e0e3e5",
+                        "secondary-container": "#3a4759",
+                        "background": "#001A33",
+                        "on-secondary-fixed-variant": "#444749",
+                        "surface-container-low": "#001e38",
+                        "surface-container-high": "#1e2b44",
+                        "surface-bright": "#1a2433",
+                        "on-tertiary-container": "#969ca4",
+                        "error-container": "#93000a",
+                        "surface": "#001A33",
+                        "surface-variant": "#43474f",
+                        "inverse-surface": "#ecf1ff",
+                        "on-secondary": "#001A33",
+                        "on-tertiary-fixed": "#161c22",
+                        "on-surface-variant": "#c3c6d1",
+                        "on-primary-fixed": "#001b3c",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-primary-container": "#d5e3ff",
+                        "surface-container": "#0b2139",
+                        "surface-container-lowest": "#000c1a",
+                        "primary-container": "#004786",
+                        "outline-variant": "#43474f",
+                        "on-background": "#ecf1ff",
+                        "on-tertiary": "#191f25",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "on-primary": "#003061",
+                        "tertiary-fixed": "#dde3eb",
+                        "secondary": "#c3c6cf",
+                        "on-tertiary-fixed-variant": "#41474e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding": "4rem",
+                        "margin-mobile": "1rem",
+                        "card-gap": "2rem",
+                        "container-max": "1200px",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["IBM Plex Sans Thai"],
+                        "label-md": ["IBM Plex Sans Thai"],
+                        "headline-xl-mobile": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-lg": ["IBM Plex Sans Thai"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter h-20 max-w-container-max mx-auto bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">WK Portfolio</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#about">เกี่ยวกับ</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#experience">ประวัติการศึกษา</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#projects">โครงการ</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:brightness-110 transition-all" href="#contact">Contact</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-padding" id="about">
+<div class="flex flex-col md:flex-row-reverse items-center gap-12">
+<!-- Smaller Profile Image -->
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition duration-1000"></div>
+<img alt="Wirathep Koppong Profile" class="relative rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-primary/30 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmyFvZy6dCo0jtfCIoRRiEyKiuiqtvGrLSBHODZfWZ5rvTpHsn2N5PrUj9U5s1XJdRRn5upwGSjArR9nX1IRBFjYC4y8tzNbXcyU2EgBw_WY2gn6yIHnw9nKcNKZzivyJ5GmAjD04H8iqiVzFMbvZDTSfSCtB39IANnXmeUYQz_z-x7SjDJ8gFUPBLEvh_LT0i2QT1Kf3T5hQYo9rD4_A_gsmVODxZvD5cFU5arQ4gsf4XiEhMy1Cd1fIYxH1Z08t8EaXGxScQdWk"/>
+</div>
+</div>
+<!-- Info Section -->
+<div class="w-full md:w-2/3 space-y-6">
+<div class="space-y-2">
+<span class="text-primary font-label-md text-label-md tracking-widest uppercase bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Student ID: 6650100412</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight">Wirathep Koppong<br/><span class="text-primary">วีรเทพ กอบพงศ์</span></h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    นิสิตคณะการจัดการโลจิสติกส์และการคมนาคมขนส่ง มุ่งเน้นการพัฒนากระบวนการจัดการห่วงโซ่อุปทานที่มีประสิทธิภาพและนวัตกรรมการขนส่งที่ยั่งยืน
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<div class="flex items-center gap-3 bg-surface-container border border-outline-variant/30 p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+<div>
+<p class="font-label-md text-label-md text-secondary">คณะ</p>
+<p class="font-headline-md text-headline-md text-on-surface leading-none">โลจิสติกส์และการคมนาคมขนส่ง</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-6">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-md text-headline-md hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">Download the form <span class="material-symbols-outlined">download</span></button>
+<button class="border-2 border-primary/50 text-primary px-8 py-4 rounded-lg font-headline-md text-headline-md hover:bg-primary/10 transition-all">Contact me</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Highlights Section -->
+<section class="bg-surface-container-low py-section-padding" id="projects">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">จุดเด่นของโครงการ (Project Highlights)</h2>
+<div class="w-16 h-1 bg-primary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Warehouse Optimization -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col hover:border-primary/40 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Warehouse Optimization</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">การจัดระเบียบคลังสินค้าที่มีประสิทธิภาพ (Efficient storage and picking) เพื่อลดระยะเวลาและเพิ่มความแม่นยำในการทำงาน</p>
+</div>
+<!-- Supply Chain Data Analytics -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col hover:border-primary/40 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Supply Chain Data Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">การวิเคราะห์ข้อมูลห่วงโซ่อุปทานเพื่อสนับสนุนการตัดสินใจ (Data-driven decision making) อย่างเป็นระบบ</p>
+</div>
+<!-- Route Planning & Distribution -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col hover:border-primary/40 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">distance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Route Planning &amp; Distribution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">การวางแผนเส้นทางและกระจายสินค้า (Transportation efficiency) เพื่อลดต้นทุนเชื้อเพลิงและเวลาในการขนส่ง</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience/Education Timeline -->
+<section class="py-section-padding max-w-container-max mx-auto px-gutter" id="experience">
+<div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-outline-variant/30">
+<!-- Academic Milestone 1 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/50 bg-background text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+<span class="material-symbols-outlined text-sm">circle</span>
+</div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-outline-variant/30 bg-surface-container shadow-sm hover:border-primary/40 transition-all">
+<div class="flex items-center justify-between mb-1">
+<time class="font-label-md text-label-md text-primary">2566 - ปัจจุบัน</time>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">คณะการจัดการโลจิสติกส์และการคมนาคมขนส่ง</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">สถาบันการจัดการปัญญาภิวัฒน์ (Panyapiwat Institute of Management)</p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded text-primary font-label-md text-label-md">Supply Chain</span>
+<span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded text-primary font-label-md text-label-md">Data Analytics</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 shadow-2xl flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-12 bg-surface-container-high text-on-surface space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">ช่องทางการติดต่อ</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">ยินดีให้คำปรึกษาและร่วมงานด้านการจัดการโลจิสติกส์</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary">เบอร์โทรศัพท์</p>
+<p class="font-body-lg text-body-lg text-on-surface">012 123 4567</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary">อีเมล</p>
+<p class="font-body-lg text-body-lg text-on-surface">dhewidnasd23@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary">ที่อยู่</p>
+<p class="font-body-lg text-body-lg text-on-surface">Bangkok, Thailand</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 p-12 bg-surface-container">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">ชื่อ-นามสกุล</label>
+<input class="w-full bg-surface-container-low p-3 rounded border border-outline-variant/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-on-surface" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">อีเมลติดต่อ</label>
+<input class="w-full bg-surface-container-low p-3 rounded border border-outline-variant/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-on-surface" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">หัวข้อข้อความ</label>
+<input class="w-full bg-surface-container-low p-3 rounded border border-outline-variant/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-on-surface" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface">ข้อความของคุณ</label>
+<textarea class="w-full bg-surface-container-low p-3 rounded border border-outline-variant/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-on-surface" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md hover:brightness-110 transition-all shadow-lg shadow-primary/20" type="submit">ส่งข้อความ</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-gutter flex flex-col md:flex-row justify-between items-center gap-card-gap max-w-container-max mx-auto border-t border-outline-variant/20 bg-background">
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md font-extrabold text-primary">WK Portfolio</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">© 2024 Wirathep Koppong. Logistics Management. Student ID: 6650100412</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-all" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-all" href="#">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-all" href="#">Resume</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary underline-offset-4 transition-all" href="#">Contact</a>
+</div>
+</footer>
+</body></html>
+</body></html>
+</body></html>
+</body></html>
+</body></html>
+
+</body></html>
+</body></html>
+
+</body></html>
+
+
+
+</body>
+</html>
